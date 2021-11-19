@@ -2,11 +2,9 @@
 
 Ethereum based Profit splitter Smart Contract for  Associate-level employees profit sharing payments with solidity 
 
-![contract](images/Ethereum.jpg)
+![contract](screenshots/Ethereum.jpg)
 
 In this Homewrok I will use my knowledge in Solidity to write a Smart Contract that will distribute profit/commission evenly. In this scenario I am using 3 associate level employees. In this scenario We are assuming that the profit/commission is evenly distributed between the 3 Associates; The smart contract will then evenly distribute the single deposit made to the recepients. In this activity I am deploying the Smart Contract on a private ganache network (testing purpose) in order to pay the associates from a deposit of 40 ether to be split evenly. 
-
-
 
 ### Level One: The `AssociateProfitSplitter` Contract
 
@@ -52,23 +50,23 @@ Next, create the following functions:
 #### Test the contract
 
 In the `Deploy` tab in Remix, deploy the contract to your local Ganache chain by connecting to `Injected Web3` and ensuring MetaMask is pointed to `localhost:8545`. Also ensure that you have 4 accounts ready to for the contract.
-![contract](images/RemixWeb3.PNG)
-![contract](images/MetaMaskLocal.PNG)
-![contract](images/ganache1.PNG)
+![contract](screenshots/RemixWeb3.PNG)
+![contract](screenshots/MetaMaskLocal.PNG)
+![contract](screenshots/ganache1.PNG)
 
 
 Once deployed, metamask prompt will allow to verify the transaction and fees; considering that you have used an account with funds, upond confirmation of transaction in your remix bottom pane (I think it's the Activity Log) a green check mark will appear to show that the action was successful.
 
-![contract](images/DeployedCheck.PNG)
+![contract](screenshots/DeployedCheck.PNG)
 
 You will need to fill in the constructor parameters with your designated `employee` addresses. 
 
-![contract](images/SolidityDeposit.PNG)
+![contract](screenshots/SolidityDeposit.PNG)
 
 Test the `deposit` function by sending various values. Keep an eye on the `employee` balances as you send different amounts of Ether to the contract and ensure the logic is executing properly. Sending 40 ether to the 3 associate employee accounts. 
 
-![contract](images/Deployed.PNG)
-![contract](images/MetaMaskTransact.PNG)
+![contract](screenshots/Deployed.PNG)
+![contract](screenshots/MetaMaskTransact.PNG)
 
 As you can see below we have subtracted 40 ether from the original account and split it between the 3 designated accounts. 
-![contract](images/ganache2.PNG)
+![contract](screenshots/ganache2.PNG)
